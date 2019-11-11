@@ -3,7 +3,7 @@ services:
   postgres:
     image: postgres:latest
     network_mode: bridge
-    container_name: postgres-comp
+    container_name: postgres
     volumes:
       - PostgresData
     expose:
@@ -17,9 +17,9 @@ services:
     restart: unless-stopped
 #  # APP*****************************************
   employee-app:
-    image: employee-app-comp:latest
+    image: employee-app:latest
     network_mode: bridge
-    container_name: employeeapp-comp
+    container_name: employeeapp
     expose:
       - 8080
     ports:
